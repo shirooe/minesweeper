@@ -1,4 +1,4 @@
-import { Home, Game, Leaders } from '@/pages';
+import { Layout, Main, Leaders } from '@/pages';
 import {
   RouteObject,
   createHashRouter,
@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 const routes: RouteObject[] = createRoutesFromElements(
-  <Route path="/" element={<Home />}>
-    <Route index element={<Game />} />
+  <Route path="/" element={<Layout />}>
+    <Route index element={<Main />} />
     <Route path="leaders" element={<Leaders />} />
   </Route>,
 );
