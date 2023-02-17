@@ -1,4 +1,4 @@
-import { ConfigProvider, Layout } from 'antd';
+import { ConfigProvider } from 'antd';
 import { ReactNode } from 'react';
 
 export const withAntd = (component: () => ReactNode) => () =>

@@ -1,6 +1,6 @@
-import { IData } from '../interfaces/data.interface';
+import { DifficultData, DifficultType } from '../interfaces/data.interface';
 
-export const difficult: Record<string, IData> = {
+export const difficult: Record<DifficultType, DifficultData> = {
   easy: {
     col: 8,
     row: 8,

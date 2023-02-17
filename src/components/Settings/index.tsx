@@ -1,14 +1,14 @@
-import { IData, IForm } from '@/shared/interfaces';
+import { DifficultData, FormValues } from '@/shared/interfaces';
 import { difficult } from '@/shared/utils/constants';
 import { Button, Form, Input, Radio, Space } from 'antd';
 import styles from './index.module.scss';
 
 interface SettingsProps {
-  handleSetData: (data: IData, username: string) => void;
+  handleSetData: (data: DifficultData, username: string) => void;
 }
 
 export const Settings = ({ handleSetData }: SettingsProps) => {
-  const onFinish = ({ username, level }: IForm) => {
+  const onFinish = ({ username, level }: FormValues) => {
     handleSetData(difficult[level], username);
   };
 

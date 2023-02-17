@@ -1,4 +1,6 @@
-export interface IForm {
+import { DifficultType } from './data.interface';
+
+export interface FormValues {
   username: string;
-  level: string;
+  level: DifficultType;
 }

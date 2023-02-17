@@ -1,12 +1,13 @@
 import { Settings } from '@/components/Settings';
-import { IData } from '@/shared/interfaces/data.interface';
+import { DifficultData } from '@/shared/interfaces/data.interface';
+import { difficult } from '@/shared/utils/constants';
 import { useState } from 'react';
 
 export const Main = () => {
   const [username, setUsername] = useState<string>('');
-  const [data, setData] = useState<IData>({ col: 8, row: 8, mines: 8 });
+  const [data, setData] = useState<DifficultData>(difficult['easy']);
 
-  const handleSetData = (data: IData, username: string) => {
+  const handleSetData = (data: DifficultData, username: string) => {
     setData(data);
     setUsername(username);
   };
