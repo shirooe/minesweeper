@@ -7,7 +7,9 @@ specifiers:
   '@types/react-dom': ^18.0.11
   '@vitejs/plugin-react': ^3.1.0
   antd: ^5.2.1
+  classnames: ^2.3.2
   compose-function: ^3.0.3
+  immer: ^9.0.19
   react: ^18.2.0
   react-dom: ^18.2.0
   react-router-dom: ^6.8.1
@@ -19,7 +21,9 @@ dependencies:
   '@types/compose-function': 0.0.30
   '@types/node': 18.13.0
   antd: 5.2.1_biqbaboplfbrettd7655fr4n2y
+  classnames: 2.3.2
   compose-function: 3.0.3
+  immer: 9.0.19
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.8.1_biqbaboplfbrettd7655fr4n2y
@@ -965,6 +969,10 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /immer/9.0.19:
+    resolution: {integrity: sha512-eY+Y0qcsB4TZKwgQzLaE/lqYMlKhv5J9dyd2RhhtGhNo2njPXDqU9XPfcNfa3MIDsdtZt5KlkIsirlo4dHsWdQ==}
+    dev: false
 
   /immutable/4.2.4:
     resolution: {integrity: sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==}

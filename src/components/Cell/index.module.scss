@@ -1,0 +1,17 @@
+.cell {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #e6e6e6;
+  user-select: none;
+}
+
+.opened {
+  background-color: #fff;
+}
+
+.mine {
+  background-color: #ff3f3f;
+}

@@ -4,7 +4,7 @@ export const difficult: Record<DifficultType, DifficultData> = {
   easy: {
     col: 8,
     row: 8,
-    mines: 8,
+    mines: 10,
   },
   medium: {
     col: 16,
@@ -16,4 +16,8 @@ export const difficult: Record<DifficultType, DifficultData> = {
     row: 32,
     mines: 100,
   },
+};
+
+export const FIELD = {
+  MINE: '💣',
 };

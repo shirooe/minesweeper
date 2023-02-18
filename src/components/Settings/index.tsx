@@ -1,5 +1,5 @@
 import { DifficultData, FormValues } from '@/shared/interfaces';
-import { difficult } from '@/shared/utils/constants';
+import { difficult } from '@/shared/utils';
 import { Button, Form, Input, Radio, Space } from 'antd';
 import styles from './index.module.scss';
 
