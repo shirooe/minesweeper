@@ -1,6 +1,5 @@
 export interface Field {
-  value: string;
-  position: Position;
+  value: string | number;
   isOpened: boolean;
   isFlagged: boolean;
 }

@@ -4,12 +4,14 @@
   width: 35px;
   height: 35px;
   cursor: pointer;
-  background-color: #e6e6e6;
+  background-color: #faad14;
   user-select: none;
+  color: #fff;
+  font-weight: bold;
 }
 
 .opened {
-  background-color: #fff;
+  background-color: #14213d;
 }
 
 .mine {
