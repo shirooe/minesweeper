@@ -1,6 +1,7 @@
 export interface Field {
   value: string | number;
   isOpened: boolean;
+  isMarked: boolean;
   isFlagged: boolean;
 }
 

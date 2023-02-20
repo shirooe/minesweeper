@@ -1,35 +1,32 @@
-import { DifficultData, Position } from '@/shared/interfaces';
-import { createBoard, openCells } from '@/shared/utils';
-import { useState } from 'react';
+import { Field, Position } from '@/shared/interfaces';
+import { MouseEvent } from 'react';
 import { Cell } from '../Cell';
-import { Timer } from '../Timer';
 import styles from './index.module.scss';
 
 interface BoardProps {
-  data: DifficultData;
+  board: Field[][];
+  onLeftClick: ({ x, y }: Position) => void;
+  onRightClick: (e: MouseEvent<HTMLDivElement>, { x, y }: Position) => void;
 }
 
-export const Board = ({ data }: BoardProps) => {
-  const [board, setBoard] = useState(() => createBoard(data));
-
-  const onLeftClick = ({ x, y }: Position) => {
-    setBoard((prev) => openCells(prev, { x, y }));
-  };
-
+export const Board = ({ board, onLeftClick, onRightClick }: BoardProps) => {
   return (
     <div>
       <div className={styles.board}>
         {board.map((row, x) => (
           <div key={x} className={styles.row}>
             {row.map((field, y) => (
-              <div onClick={() => onLeftClick({ x, y })} key={y}>
+              <div
+                onClick={() => onLeftClick({ x, y })}
+                onContextMenu={(e) => onRightClick(e, { x, y })}
+                key={y}
+              >
                 <Cell field={field} key={y} />
               </div>
             ))}
           </div>
         ))}
       </div>
-      <Timer endtime={data.time} />
     </div>
   );
 };

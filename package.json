@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/compose-function": "^0.0.30",
     "@types/node": "^18.13.0",
+    "@types/uuid": "^9.0.0",
     "antd": "^5.2.1",
     "classnames": "^2.3.2",
     "compose-function": "^3.0.3",
@@ -19,7 +20,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
-    "sass": "^1.58.1"
+    "sass": "^1.58.1",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

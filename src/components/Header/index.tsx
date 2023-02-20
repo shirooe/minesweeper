@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 
 export const Header = () => {
   const switchStyle = ({ isActive }: { isActive: boolean }) => {
-    return isActive ? activeStyle : undefined;
+    return isActive ? { color: '#faad14' } : { color: '#14213d' };
   };
 
   return (
@@ -17,5 +17,3 @@ export const Header = () => {
     </div>
   );
 };
-
-const activeStyle = { textDecoration: 'underline', color: '#faad14' };

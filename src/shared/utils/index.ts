@@ -5,3 +5,4 @@ export * from './randomInteger';
 export * from './setCountMines';
 export * from './openCells';
 export * from './padStart';
+export * from './setFieldOptions';

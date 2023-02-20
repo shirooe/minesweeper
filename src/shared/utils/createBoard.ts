@@ -8,6 +8,7 @@ export const createBoard = ({ col, row, mines }: DifficultData): Field[][] => {
       return {
         value: '',
         isOpened: false,
+        isMarked: false,
         isFlagged: false,
       };
     });

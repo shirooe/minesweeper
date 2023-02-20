@@ -8,15 +8,18 @@ interface CellProps {
 }
 
 export const Cell = ({ field }: CellProps) => {
-  const { value, isOpened } = field;
+  const { value, isOpened, isFlagged, isMarked } = field;
 
   return (
     <div
       className={cn(styles.cell, {
         [styles.opened]: isOpened,
         [styles.mine]: value === FIELD.MINE && isOpened,
+        [styles[`color-${value}`]]: value,
       })}
     >
+      {isMarked && '❓'}
+      {isFlagged && '🚩'}
       {isOpened && value}
     </div>
   );

@@ -6,6 +6,8 @@ export const openCells = (board: Field[][], { x, y }: Position) => {
   return produce(board, (draft) => {
     draft.forEach((row, i) => {
       row.forEach((_, j) => {
+        if (draft[x][y].isFlagged === true) return;
+
         if (draft[x][y].value === FIELD.MINE) {
           draft[i][j].isOpened = true;
         }
