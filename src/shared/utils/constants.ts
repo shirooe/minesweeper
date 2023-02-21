@@ -24,3 +24,9 @@ export const difficult: Record<DifficultType, DifficultData> = {
 export const FIELD = {
   MINE: '💣',
 };
+
+export const GAME_STATUS = {
+  WIN: '😎',
+  PENDING: '🤫',
+  LOSE: '😫',
+};

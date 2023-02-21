@@ -15,7 +15,7 @@ export const Cell = ({ field }: CellProps) => {
       className={cn(styles.cell, {
         [styles.opened]: isOpened,
         [styles.mine]: value === FIELD.MINE && isOpened,
-        [styles[`color-${value}`]]: value,
+        [styles[`color-${value}`]]: value && isOpened,
       })}
     >
       {isMarked && '❓'}

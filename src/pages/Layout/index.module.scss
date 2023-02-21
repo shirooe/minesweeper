@@ -1,5 +1,6 @@
 .layout {
   padding: 15px;
-  width: clamp(300px, 60vw, 600px);
   border-radius: 6px;
+  box-sizing: border-box;
+  min-width: 290px;
 }

@@ -10,6 +10,8 @@ export const openCells = (board: Field[][], { x, y }: Position) => {
 
         if (draft[x][y].value === FIELD.MINE) {
           draft[i][j].isOpened = true;
+          draft[i][j].isFlagged = false;
+          draft[i][j].isMarked = false;
         }
 
         if (draft[x][y].value === '') {
@@ -18,6 +20,7 @@ export const openCells = (board: Field[][], { x, y }: Position) => {
         }
 
         draft[x][y].isOpened = true;
+        draft[x][y].isMarked = false;
       });
     });
   });
@@ -49,6 +52,9 @@ const revealEmptyCells = (queue: Position[], board: Field[][]) => {
         const axisY = j + y;
         if (axisX >= 0 && axisY >= 0 && axisX < width && axisY < height) {
           board[axisX][axisY].isOpened = true;
+
+          board[axisX][axisY].isFlagged = false;
+          board[axisX][axisY].isMarked = false;
         }
 
         if (
