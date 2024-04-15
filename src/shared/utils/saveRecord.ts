@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { User } from '../interfaces/user.interface';
+import type { User } from '@/shared/types';
 
 export const saveRecord = (users: User[], name: string, newUser: User) => {
   return produce(users, (draft) => {

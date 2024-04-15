@@ -1,5 +1,5 @@
-import { Layout, Leaders, Main } from '@/pages';
 import { createHashRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import { Layout, Leaders, Main } from '@/pages';
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<Layout />}>

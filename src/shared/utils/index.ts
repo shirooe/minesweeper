@@ -1,8 +1,9 @@
-export * from './constants';
-export * from './createBoard';
-export * from './placeMines';
-export * from './randomInteger';
-export * from './setCountMines';
-export * from './openCells';
-export * from './padStart';
-export * from './setFieldOptions';
+export { createBoard } from './createBoard';
+export { placeMines } from './placeMines';
+export { randomInteger } from './randomInteger';
+export { setMinesCount } from './setCountMines';
+export { openCells } from './openCells';
+export { padStart } from './padStart';
+export { setFieldOptions } from './setFieldOptions';
+export { checkWinStatus } from './checkWinStatus';
+export { saveRecord } from './saveRecord';

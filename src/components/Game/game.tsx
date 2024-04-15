@@ -1,23 +1,20 @@
-import { UserContext } from '@/shared/context/user';
-import { DifficultData, Position } from '@/shared/interfaces';
+import { Board, Timer } from '@/components';
+import { FIELD, GAME_STATUS } from '@/shared/constants';
+import { UserContext } from '@/shared/context';
+import type { GameData, Position } from '@/shared/types';
 import {
+  checkWinStatus,
   createBoard,
-  FIELD,
-  GAME_STATUS,
   openCells,
+  saveRecord,
   setFieldOptions,
 } from '@/shared/utils';
-import { checkWinStatus } from '@/shared/utils/checkWinStatus';
-import { saveRecord } from '@/shared/utils/saveRecord';
 import { Button, Typography } from 'antd';
 import { MouseEvent, useContext, useState } from 'react';
-import { v4 as uuid } from 'uuid';
-import { Board } from '../Board';
-import { Timer } from '../Timer';
-import styles from './index.module.scss';
+import styles from './game.module.scss';
 
 interface GameProps {
-  data: DifficultData;
+  data: GameData;
   changeGameState: () => void;
   username: string;
 }
@@ -28,14 +25,12 @@ export const Game = ({ data, changeGameState, username }: GameProps) => {
   const [mines, setMines] = useState(data.mines);
   const [flagged, setFlagged] = useState(0);
   const [gameStatus, setGameStatus] = useState(GAME_STATUS.PENDING);
-  // FIX: I NEED REFACTOOOOOR 😡
-  // maybe all component 🥹
-  const [id, setId] = useState(uuid);
+  const [id, setId] = useState(() => Date.now().toString());
 
   const handleReset = () => {
     setBoard(() => createBoard(data));
     setMines(() => data.mines);
-    setId(() => uuid());
+    setId(() => Date.now().toString());
     setGameStatus(GAME_STATUS.PENDING);
   };
 

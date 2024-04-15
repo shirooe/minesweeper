@@ -1,5 +1,5 @@
-import { Field } from '../interfaces';
-import { FIELD } from './constants';
+import { FIELD } from '@/shared/constants';
+import type { Field } from '@/shared/types';
 
 export const setMinesCount = (board: Field[][]) => {
   const width = board.length;

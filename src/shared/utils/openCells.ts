@@ -1,6 +1,6 @@
 import produce from 'immer';
-import { Field, Position } from '../interfaces';
-import { FIELD } from './constants';
+import { FIELD } from '@/shared/constants';
+import type { Field, Position } from '@/shared/types';
 
 export const openCells = (board: Field[][], { x, y }: Position) => {
   return produce(board, (draft) => {

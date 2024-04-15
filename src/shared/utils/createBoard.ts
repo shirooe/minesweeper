@@ -1,18 +1,16 @@
-import { DifficultData, Field } from '../interfaces';
 import { placeMines } from './placeMines';
 import { setMinesCount } from './setCountMines';
+import type { GameData, Field } from '@/shared/types';
 
-export const createBoard = ({ col, row, mines }: DifficultData): Field[][] => {
-  const board = new Array(row).fill(null).map(() => {
-    return new Array(col).fill(null).map(() => {
-      return {
-        value: '',
-        isOpened: false,
-        isMarked: false,
-        isFlagged: false,
-      };
-    });
-  });
+export const createBoard = ({ col, row, mines }: GameData): Field[][] => {
+  const board = Array.from({ length: row }, () =>
+    Array.from({ length: col }, () => ({
+      value: '',
+      isOpened: false,
+      isMarked: false,
+      isFlagged: false,
+    })),
+  );
 
   placeMines(board, mines);
   setMinesCount(board);

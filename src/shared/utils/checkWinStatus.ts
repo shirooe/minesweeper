@@ -1,4 +1,4 @@
-import { Field } from '../interfaces';
+import type { Field } from '@/shared/types';
 
 export const checkWinStatus = (board: Field[][], mines: number) => {
   const flatted = board.flat();

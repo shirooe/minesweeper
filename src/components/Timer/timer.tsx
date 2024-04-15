@@ -1,6 +1,7 @@
-import { GAME_STATUS, padStart } from '@/shared/utils';
 import { Typography } from 'antd';
 import { useEffect, useRef, useState } from 'react';
+import { GAME_STATUS } from '@/shared/constants';
+import { padStart } from '@/shared/utils';
 
 interface TimerProps {
   endtime: number;

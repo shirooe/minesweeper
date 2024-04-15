@@ -1,7 +1,7 @@
-import { Field, Position } from '@/shared/interfaces';
+import { Field, Position } from '@/shared/types';
 import { MouseEvent } from 'react';
-import { Cell } from '../Cell';
-import styles from './index.module.scss';
+import { Cell } from '@/components';
+import styles from './board.module.scss';
 
 interface BoardProps {
   board: Field[][];

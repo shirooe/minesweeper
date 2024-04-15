@@ -1,5 +1,5 @@
-import { UserContext } from '@/shared/context/user';
 import { useContext } from 'react';
+import { UserContext } from '@/shared/context';
 import styles from './index.module.scss';
 
 export const Leaders = () => {
