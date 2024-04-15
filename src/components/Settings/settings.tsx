@@ -1,15 +1,15 @@
-import { DifficultData, FormValues } from '@/shared/interfaces';
-import { difficult } from '@/shared/utils';
 import { Button, Form, Input, Radio, Space } from 'antd';
-import styles from './index.module.scss';
+import { difficulty, label } from '@/shared/constants';
+import type { FormValues, GameData } from '@/shared/types';
+import styles from './settings.module.scss';
 
 interface SettingsProps {
-  handleSetData: (data: DifficultData, username: string) => void;
+  handleSetData: (data: GameData, username: string) => void;
 }
 
 export const Settings = ({ handleSetData }: SettingsProps) => {
   const onFinish = ({ username, level }: FormValues) => {
-    handleSetData(difficult[level], username);
+    handleSetData(difficulty[level], username);
   };
 
   return (
@@ -29,9 +29,11 @@ export const Settings = ({ handleSetData }: SettingsProps) => {
       >
         <Radio.Group>
           <Space direction="vertical">
-            <Radio value="easy">Простой 8x8, 10 мин</Radio>
-            <Radio value="medium">Средний 16x16, 40 мин</Radio>
-            <Radio value="hard">Сложный 32x16, 100 мин</Radio>
+            {Object.keys(difficulty).map((key) => (
+              <Radio key={key} value={key}>
+                {label[key]}
+              </Radio>
+            ))}
           </Space>
         </Radio.Group>
       </Form.Item>

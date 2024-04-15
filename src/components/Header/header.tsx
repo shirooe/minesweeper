@@ -1,9 +1,14 @@
 import { NavLink } from 'react-router-dom';
-import styles from './index.module.scss';
+import styles from './header.module.scss';
+import { COLORS } from '@/shared/constants';
+
+interface NavLinkProps {
+  isActive: boolean;
+}
 
 export const Header = () => {
-  const switchStyle = ({ isActive }: { isActive: boolean }) => {
-    return isActive ? { color: '#faad14' } : { color: '#14213d' };
+  const switchStyle = ({ isActive }: NavLinkProps) => {
+    return isActive ? { color: COLORS.primary } : { color: COLORS.secondary };
   };
 
   return (

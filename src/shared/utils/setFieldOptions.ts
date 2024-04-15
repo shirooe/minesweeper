@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { Field, Position } from '../interfaces';
+import type { Field, Position } from '@/shared/types';
 
 export const setFieldOptions = (
   board: Field[][],

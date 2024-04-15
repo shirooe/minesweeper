@@ -1,7 +1,7 @@
-import { router } from '@/shared/router';
 import { RouterProvider } from 'react-router-dom';
 import { withProviders } from './providers';
-import { Provider } from '../shared/context';
+import { Provider } from '@/shared/context';
+import { router } from '@/shared/router';
 import './styles.scss';
 
 function App() {

@@ -1,4 +1,3 @@
-import { User } from '@/shared/interfaces/user.interface';
 import {
   createContext,
   Dispatch,
@@ -6,6 +5,7 @@ import {
   SetStateAction,
   useState,
 } from 'react';
+import type { User } from '@/shared/types';
 
 type UserContextType = { users: User[]; setUsers: Dispatch<SetStateAction<User[]>> };
 
